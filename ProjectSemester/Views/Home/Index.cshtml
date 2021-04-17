@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjectSemester.Models.WeaponModel>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Магазин смартфонов</title>
+</head>
+<body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>Модель</td>
+            <td>Производитель</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        @foreach (var weapon in Model)
+        {
+            <tr>
+                <td>@weapon.name</td>
+                <td>@weapon.calibr</td>
+                <td>@weapon.description</td>
+                <td>@weapon.price</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
