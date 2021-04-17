@@ -10,6 +10,7 @@ namespace ProjectSemester.Models
     {
         public DbSet<WeaponModel> Weapons { get; set; }
         public DbSet<AmmoModel> Ammo { get; set; }
+        public DbSet<OrderModel> Orders { get; set; }
 
         public ShopContext(DbContextOptions<ShopContext> options) : base (options)
         {

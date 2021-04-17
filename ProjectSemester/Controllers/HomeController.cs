@@ -23,5 +23,22 @@ namespace ProjectSemester.Controllers
         {
             return View(db.Weapons.ToList()); 
         }
+
+
+        [HttpGet]
+        public IActionResult Buy (int? id)
+        {
+            if (id == null) return RedirectToAction("Index");
+            ViewBag.WeaponId = id;
+            return View(); 
+        }
+
+        [HttpPost]
+        public string Buy (OrderModel order)
+        {
+            db.Orders.Add(order); 
+            db.SaveChanges();
+            return "Благодарим, " + order.FIO + " за покупку в нашем магазине"; 
+        }
     }
 }
