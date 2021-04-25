@@ -14,5 +14,6 @@ namespace ProjectSemester.Models
         public decimal price { get; set; }
         public int categoryId { get; set; }
         public bool rifle { get; set; }
+        public string image { get; set; }
     }
 }
